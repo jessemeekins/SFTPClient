@@ -31,19 +31,5 @@ class Secrets:
     FTP_USERNAME = "sa_fireftp"
     FTP_PASSWORD = "RkK1$*4uKQf4H7"
 
-# Set the environment variables
-os.environ["IP_ADDRESS"] = Secrets.IP_ADDRESS
-os.environ["PORT"] = Secrets.PORT
-os.environ["EXPORT_FILE_EXTENSION"] = Secrets.EXPORT_FILE_EXTENSION
-os.environ["BDE_FILE_EXTENSION"] = Secrets.BDE_FILE_EXTENSION
-os.environ["DOCKER_PATH"] = Secrets.SERVER_PATH
-os.environ["LOCAL_PATH"] = Secrets.LOCAL_PATH
-os.environ["TEST_PATH"] = Secrets.TEST_PATH
-os.environ["PROJECT_PATH"] = Secrets.PROJECT_PATH
-os.environ["SFTP_USERNAME"] = Secrets.SFTP_USERNAME
-os.environ["SFTP_PASSWORD"] = Secrets.SFTP_PASSWORD
-os.environ["LOCAL"] = Secrets.LOCAL
-os.environ["FTP_USERNAME"] = Secrets.FTP_USERNAME
-os.environ["FTP_PASSWORD"] = Secrets.FTP_PASSWORD
 
 

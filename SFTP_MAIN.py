@@ -1,4 +1,5 @@
-#!/bin/bash/python310
+#!/usr/bin/env python3.10
+
 """
 Copyright (c) 2023 Jesse Meekins
 See project 'license' file for more information.
@@ -33,9 +34,9 @@ description = "[*] This Python script allows you to transfer files securely over
 parser = argparse.ArgumentParser(description=description)
 
 # Define the arguments
-parser.add_argument("-devf", "--DEV_FULL", action="store_true", help="Transfer full roster will all codes in the directory")
+parser.add_argument("-devf", "--DEV_FULL", action="store_true", help="Transfer full roster will all codes in the directory to the DEV file path")
 parser.add_argument("-f", "--PROD_FULL", action="store_true", help="Transfer full roster will all codes in the directory")
-parser.add_argument("-deva", "--DEV_PAR", action="store_true", help="Transfer roster with working codes only")
+parser.add_argument("-deva", "--DEV_PAR", action="store_true", help="Transfer roster with working codes only to the DEV file path")
 parser.add_argument("-a", "--PROD_PAR", action="store_true", help="Transfer roster with working codes only")
 
 # Parse the arguments
@@ -51,7 +52,9 @@ print("[*] When pulling the roster data, remember that theshift ends at 0659. If
 print()
 print("[*] This script accepts the following arguments:")
 print("[*] -f: 'FULL' roster export including all paycodes scheduled for today.")
+print("[*] -devf: 'DEV_FULL' sends roster export to local dev files system.")
 print("[*] -a: 'PAR' roster export for working codes only on the current shift.")
+print("[*] -deva: 'DEV_PAR' sends roster export to local dev files system.")
 print()
 
 # Print the arguments passed
