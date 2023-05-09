@@ -9,22 +9,43 @@ import argparse
 from SFTP_Client import sftp_main
 
 
-title = """
-  ____ _____ _____ _____ 
- / ___|_   _|_   _| ____|
-| |     | |   | | |  _|  
-| |___  | |   | | | |___ 
- \____| |_|   |_| |_____|
+prod = """
+ _______ 
+|  ___  \\
+| |   | ||
+| |___| ||
+|   ___//   
+|  ||  
+|__||   
+_______
+|  __  \\
+| ||_) ||
+|  _  // 
+| || \ \\ 
+|_||  \_\\
+  ______ 
+ / ____ \\
+| //   \ ||
+| ||   | ||
+| \\___/ ||
+ \______//
+ _______
+|  ____ \\
+| ||   \ ||
+| ||   | ||
+| ||___/ ||
+|_______//        
+        
 """
 
 test = """
- _______   _______   _______   _______
-|       | |       | |       | |       |
-|_     _| |    ___| |  _____| |_     _|
-  |   |   |   |___  | |_____    |   |  
-  |   |   |    ___| |_____  |   |   |  
-  |   |   |   |___   _____| |   |   |  
-  |___|   |_______| |_______|   |___|  
+ ________   ________   ________   ________
+|       || |       || |       || |       ||
+|_     _|| |    ___|| |  _____|| |_     _||
+  |   ||   |   ||___  | ||_____    |   ||  
+  |   ||   |    ___|| |_____  ||   |   ||  
+  |   ||   |   ||___   _____| ||   |   ||  
+  |___||   |_______|| |_______||   |___||  
 """
 
 # Brief description
@@ -43,7 +64,7 @@ parser.add_argument("-a", "--PROD_PAR", action="store_true", help="Transfer rost
 args = parser.parse_args()
 
 # Print the title and description
-print(title)
+
 print()
 print(description)
 print()
@@ -64,6 +85,7 @@ if args.DEV_FULL:
     print("[*] The 'DEV_FULL' roster report is now being downlaoded...")
     sftp_main("DEV_FULL")
 if args.PROD_FULL:
+    print(prod)
     print("[*] The 'PROD_FULL' roster report is now being downlaoded...")
     sftp_main("PROD_FULL")
 if args.DEV_PAR:
@@ -71,6 +93,7 @@ if args.DEV_PAR:
     print("[*] The 'DEV_PAR' radio roster report is now being downlaoded...")
     sftp_main("DEV_PAR")
 if args.PROD_PAR:
+    print(prod)
     print("[*] The 'PAR' radio roster report is now being downlaoded...")
     sftp_main("PROD_PAR")
 
