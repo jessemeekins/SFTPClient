@@ -66,6 +66,17 @@ class FileConfig:
             "filename": f"ROS11 MFD{formatted_time}.xml",
             "debug": True,
         },
+        "ASSIGN": {
+            "transfer_type": GET,
+            "port": PORT,
+            "username": SFTP_USERNAME,
+            "password": SFTP_PASSWORD,
+            "location": IP_ADDRESS,
+            "extension": EXPORT_FILE_EXTENSION,
+            "destination": PROJECT_PATH,
+            "filename": "full_assignment.csv",
+            "debug": True,
+        },
     }
     
     def __init__(self, config: str) -> None:

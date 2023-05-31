@@ -6,7 +6,7 @@ See project 'license' file for more information.
 """
 
 import argparse
-from SFTP_Client import sftp_main
+from sftp_Client import sftp_main
 
 
 prod = """
@@ -59,6 +59,7 @@ parser.add_argument("-devf", "--DEV_FULL", action="store_true", help="Transfer f
 parser.add_argument("-f", "--PROD_FULL", action="store_true", help="Transfer full roster will all codes in the directory")
 parser.add_argument("-deva", "--DEV_PAR", action="store_true", help="Transfer roster with working codes only to the DEV file path")
 parser.add_argument("-a", "--PROD_PAR", action="store_true", help="Transfer roster with working codes only")
+parser.add_argument("-assign", "--ASSIGN", action="store_true", help="Transfer roster with working codes only")
 
 # Parse the arguments
 args = parser.parse_args()
@@ -96,6 +97,10 @@ if args.PROD_PAR:
     print(prod)
     print("[*] The 'PAR' radio roster report is now being downlaoded...")
     sftp_main("PROD_PAR")
+if args.ASSIGN:
+    print(prod)
+    print("[*] The 'ASSIGNMENTS' report is now being downlaoded...")
+    sftp_main("ASSIGN")
 
 
 
