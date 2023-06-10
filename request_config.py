@@ -15,7 +15,13 @@ PORT = s.PORT
 EXPORT_FILE_EXTENSION = s.EXPORT_FILE_EXTENSION
 SERVER_PATH = s.SERVER_PATH
 PROJECT_PATH = s.PROJECT_PATH
+
+POWEREDGE_R720_ADDR = s.POWEREDGE_R720_ADDRESS
+POWEREDGE_R720_PASS = s.POWEREDGE_R720_PASSWORD
+POWEREDGE_R720_USER = s.POWEREDGE_R720_USERNAME
+
 GET = "get"
+PUT = 'put'
 
 formatted_time = datetime.strftime(datetime.today() - timedelta(hours=7), "%Y-%m-%d")
 
@@ -75,6 +81,17 @@ class FileConfig:
             "extension": EXPORT_FILE_EXTENSION,
             "destination": PROJECT_PATH,
             "filename": "full_assignment.csv",
+            "debug": True,
+        },
+        "r720": {
+            "transfer_type": PUT,
+            "port": PORT,
+            "username": POWEREDGE_R720_USER,
+            "password": POWEREDGE_R720_PASS,
+            "location": POWEREDGE_R720_ADDR,
+            "extension": '/Users/jessemeekins/Documents/',
+            "destination": '/home/jesse/Desktop',
+            "filename": "jessemeekins_com.zip",
             "debug": True,
         },
     }

@@ -31,5 +31,11 @@ class Secrets:
     FTP_USERNAME = "sa_fireftp"
     FTP_PASSWORD = "RkK1$*4uKQf4H7"
 
+    POWEREDGE_R720_ADDRESS = '192.168.1.194'
+    POWEREDGE_R720_PASSWORD = 'FuryFriends10!'
+    POWEREDGE_R720_USERNAME = 'jesse'
+
+    
+
 
 

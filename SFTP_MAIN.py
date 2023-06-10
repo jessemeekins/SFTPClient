@@ -60,6 +60,8 @@ parser.add_argument("-f", "--PROD_FULL", action="store_true", help="Transfer ful
 parser.add_argument("-deva", "--DEV_PAR", action="store_true", help="Transfer roster with working codes only to the DEV file path")
 parser.add_argument("-a", "--PROD_PAR", action="store_true", help="Transfer roster with working codes only")
 parser.add_argument("-assign", "--ASSIGN", action="store_true", help="Transfer roster with working codes only")
+parser.add_argument("-r720", "--R720", action="store_true", help="Transfer roster with working codes only")
+
 
 # Parse the arguments
 args = parser.parse_args()
@@ -101,6 +103,10 @@ if args.ASSIGN:
     print(prod)
     print("[*] The 'ASSIGNMENTS' report is now being downlaoded...")
     sftp_main("ASSIGN")
+if args.R720:
+    print(prod)
+    print("[*] The 'SFTP R720' report is now being downlaoded...")
+    sftp_main("R720")
 
 
 
